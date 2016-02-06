@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78C6BA34-DF0A-4F7C-A831-2D20AC52CC3C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AngularJSApplicationService</RootNamespace>
+    <AssemblyName>AngularJSApplicationService</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountsBusinessRules.cs" />
+    <Compile Include="AccountsBusinessService.cs" />
+    <Compile Include="ApplicationInitializationBusinessService.cs" />
+    <Compile Include="CustomersBusinessRules.cs" />
+    <Compile Include="CustomersBusinessService.cs" />
+    <Compile Include="OrdersBusinessRules.cs" />
+    <Compile Include="OrdersBusinessService.cs" />
+    <Compile Include="ProductsBusinessRules.cs" />
+    <Compile Include="ProductsBusinessService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidationRules.cs" />
+    <Compile Include="Validations.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AngularJSDataModels\AngularJSDataModels.csproj">
+      <Project>{c300bbe1-c9e4-4c13-83f5-8ab4d6b34456}</Project>
+      <Name>AngularJSDataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AngularJSDataServiceInterface\AngularJSDataServiceInterface.csproj">
+      <Project>{c3653520-50c3-41c4-a715-81b550350625}</Project>
+      <Name>AngularJSDataServiceInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AngularJSUtilities\AngularJSUtilities.csproj">
+      <Project>{bdf49c04-0bc2-4d32-938c-412aed4eba1f}</Project>
+      <Name>AngularJSUtilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
